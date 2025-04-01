@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aushadhi Point - Medical Store</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            box-sizing: border-box;
+        }
+        .header {
+            background-color: #27ae60;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 40px;
+            transition: all 0.3s;
+        }
+        .header img {
+            height: 50px;
+        }
+        .header span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .banner {
+            background: #2ecc71;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+            margin-top: 100px;
+            animation: slideIn 1s ease-out;
+        }
+        .banner a {
+            color: yellow;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .container {
+            width: 85%;
+            margin: 0 auto;
+            padding: 100px 0 40px;
+        }
+        h2 {
+            text-align: center;
+            color: #27ae60;
+            font-size: 32px;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-out;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .product {
+            background: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 5px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px;
+            background: #27ae60;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #1e8744;
+        }
+
+        /* Smooth Scroll Effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            cursor: pointer;
+        }
+        .whatsapp-button img {
+            width: 40px;
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            background-color: #f8f8f8;
+            padding: 40px 0;
+        }
+        .review-card {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .review-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .review-card input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .review-card textarea {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            height: 100px;
+        }
+        .review-card button {
+            padding: 10px 20px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .review-card button:hover {
+            background-color: #1e8744;
+        }
+
+        /* Note Section */
+        .order-note {
+            background-color: #f1c40f;
+            color: black;
+            padding: 15px;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+    <img src="https://i.ibb.co/1tzvjGWP/logo.png" alt="Aushadhi Point Logo"> <!-- Use direct image URL -->
+    <span>Aushadhi Point - Your Trusted Medical Store</span>
+</div>
+    <div class="banner">
+        🎉 <strong>Get Up to 20% Discount on All Medicines!</strong> 🚚 Free Home Delivery up to ₹2000!<br>
+        📞 Call Us at: <strong>84638 22424</strong><br>
+        📍 Address: G11, Krishna Tower, Annapurna Rd, Usha Nagar, Indore, Madhya Pradesh 452009<br>
+        👉 <a href="https://g.co/kgs/er4MifU" target="_blank">View Our Location on Google Maps</a><br>
+    </div>
+
+    <!-- Order Note Section -->
+    <div class="order-note">
+        📩 Need any medicine? Just send us a WhatsApp message at <strong>84638 22424</strong> to place your order instantly! 🛒<br>
+        📲 Click "Order Now" below for a quick order via WhatsApp.
+    </div>
+
+    <!-- Product Section -->
+    <div class="container">
+        <h2>💊 Our Best Medicines</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://via.placeholder.com/250" alt="Medicine 1">
+                <h3>Paracetamol</h3>
+                <p>₹50 - Pain & Fever Relief</p>
+                <a href="https://wa.me/918463822424?text=I%20want%20to%20order%20Paracetamol" class="button">Order Now</a>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250" alt="Medicine 2">
+                <h3>Vitamin C Tablets</h3>
+                <p>₹120 - Immunity Booster</p>
+                <a href="https://wa.me/918463822424?text=I%20want%20to%20order%20Vitamin%20C%20Tablets" class="button">Order Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <div class="reviews-section">
+        <h2>🌟 Customer Reviews</h2>
+        <div class="review-card">
+            <h3>Leave a Review</h3>
+            <input type="text" placeholder="Your Name">
+            <textarea placeholder="Write your review here..."></textarea>
+            <button>Submit Review</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        &copy; 2025 Aushadhi Point - All Rights Reserved
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="whatsapp-button" onclick="window.open('https://wa.me/918463822424', '_blank')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </div>
+
+</body>
+</html>
